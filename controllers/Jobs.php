@@ -35,10 +35,10 @@ class Jobs extends Controller
     public function listInjectRowClass($record, $definition = null)
     {
         // 0 = Expired
-        if ($record->job_status == 0) {
+        if ($record->is_expired == 0) {
             return 'negative strike';
         }
-        else if ($record->job_status == 1) {
+        else if ($record->is_expired == 1) {
             return 'positive';
         }
 

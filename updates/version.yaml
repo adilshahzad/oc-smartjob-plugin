@@ -14,3 +14,6 @@
 1.0.6:
     - Users can apply to a job
     - create_user_jobs_table.php
+1.0.7:
+    - Renamed the boolean columns to meet the OctoberCMS plugin requirements
+    - rename_boolean_columns.php

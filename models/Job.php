@@ -49,7 +49,7 @@ class Job extends Model
     public function scopeIsPublished($query)
     {
         return $query
-            ->where('job_status', 1) // 1 = Active
+            ->where('is_expired', 1) // 1 = Active
             // ->where('position_filled', 0)
         ;
     }
@@ -61,7 +61,7 @@ class Job extends Model
     public function expire($status)
     {
         $job = Self::find($this->id);
-        $job->job_status = $status;
+        $job->is_expired = $status;
         $job->save();
     }
 
@@ -72,7 +72,7 @@ class Job extends Model
     public function filled($status)
     {
         $job = Self::find($this->id);
-        $job->position_filled = $status;
+        $job->is_filled = $status;
         $job->save();
     }
 }

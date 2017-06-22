@@ -23,19 +23,19 @@ scopes:
 
     activated:
         # Filter name
-        label: adil.smartjob::lang.job.job_expired
+        label: adil.smartjob::lang.job.is_expired
         # Filter type
         type: switch
         # SQL conditions
         conditions:
-            - job_status = '0' # Expired
-            - job_status = '1' # Active
+            - is_expired = '0' # Expired
+            - is_expired = '1' # Active
     positionfilled:
         # Filter name
-        label: adil.smartjob::lang.job.position_filled
+        label: adil.smartjob::lang.job.is_filled
         # Filter type
         type: switch
         # SQL conditions
         conditions:
-            - position_filled = '0'
-            - position_filled = '1'
+            - is_filled = '0'
+            - is_filled = '1'

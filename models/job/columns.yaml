@@ -55,12 +55,12 @@ columns:
     total_number_of_post:
         label: adil.smartjob::lang.job.total_number_of_post
         invisible: true
-    position_filled:
-        label: adil.smartjob::lang.job.position_filled
+    is_filled:
+        label: adil.smartjob::lang.job.is_filled
         type: switch
         width: 5%
         invisible: true
-    job_status:
+    is_expired:
         label: adil.smartjob::lang.job.job_status
         type: partial
         path: ~/plugins/adil/smartjob/models/job/job_status.htm
