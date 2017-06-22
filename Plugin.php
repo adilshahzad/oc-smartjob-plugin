@@ -19,7 +19,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'adil.smartjob::lang.plugin.name',
             'description' => 'adil.smartjob::lang.plugin.description',
-            'author'      => 'adil',
+            'author'      => 'Adil Shahzad',
             'icon'        => 'icon-thumbs-o-up'
         ];
     }
