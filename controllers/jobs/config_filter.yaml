@@ -1,0 +1,41 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    groups:
+        # Filter name
+        label: adil.smartjob::lang.job.department
+        # Model Class name
+        modelClass: Adil\Smartjob\Models\Department
+        # Model attribute to display for the name
+        nameFrom: department_name
+        # SQL conditions
+        conditions: department_id in (:filtered)
+        # Filter scope function
+        # scope: filterByGroup
+
+    created_date:
+        label: adil.smartjob::lang.job.created_at
+        type: daterange
+        conditions: created_at >= ':after' AND created_at <= ':before'
+
+    activated:
+        # Filter name
+        label: adil.smartjob::lang.job.job_expired
+        # Filter type
+        type: switch
+        # SQL conditions
+        conditions:
+            - job_status = '0' # Expired
+            - job_status = '1' # Active
+    positionfilled:
+        # Filter name
+        label: adil.smartjob::lang.job.position_filled
+        # Filter type
+        type: switch
+        # SQL conditions
+        conditions:
+            - position_filled = '0'
+            - position_filled = '1'

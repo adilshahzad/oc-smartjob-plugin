@@ -1,0 +1,42 @@
+{% set job = __SELF__.jobDetail %}
+
+<div class="row">
+
+    <div class="col-md-12">       
+        {% if not user %}
+        <div class="alert alert-warning">
+                Please sign in to apply for this position! or send your CV to <a href="mailto: {{ html_email(job.application_email)|raw }}">email</a>
+        </div>        
+        {% endif %}
+    </div>
+
+    <div class="col-md-5">
+        <i class="icon-tags text-danger" title="Job Type"></i> {{job.job_type}} in {{job.department.department_name}}  <i class="icon-map-marker text-success" title="Job location"></i> {{job.location}} 
+    </div>
+    {% if job.min_salary %}
+    <div class="col-md-2">
+        <i class="icon-money text-danger" title="Salary"></i> {{job.min_salary|number_format}} <i class="icon-arrow-right"></i> {{job.max_salary|number_format}}  
+    </div>
+    {% endif %}
+    {% if job.gender %}
+    <div class="col-md-2">
+        <i class="icon-male text-warning" title="Gender"></i> {{job.gender}}
+    </div>
+    {% endif %}
+    <div class="col-md-3">
+        <i class="icon-calendar text-success" title="Created at"></i> Posted: {{job.created_at|time_diff }}        
+    </div>    
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <i class="icon-calendar"></i> Expires on : <span class="text-danger">{{ job.job_expiry|date('M d, Y') }}</span>
+        {% if user %}
+            &nbsp;<button data-request="onApplyforJob" class="btn btn-sm btn-success">Click to apply</button>
+        {% endif %}
+    </div>
+
+</div>
+
+
+<div class="content"><p>
+    {{ job.description|raw }}</p></div>

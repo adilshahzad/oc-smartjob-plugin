@@ -1,0 +1,60 @@
+<div data-control="toolbar">
+    <a
+        href="<?= Backend::url('adil/smartjob/jobs/create') ?>"
+        class="btn btn-primary oc-icon-plus">
+        New Job
+    </a>
+
+    <div class="btn-group dropdown dropdown-fixed" data-control="bulk-actions">        
+        <button
+            data-primary-button
+            type="button"
+            class="btn btn-default"
+            data-request="onBulkAction"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$(this).prop('disabled', true).next().prop('disabled', true)"
+            data-stripe-load-indicator>
+            <?= e(trans('adil.smartjob::lang.job.bulk_actions')) ?>
+        </button>        
+        <button
+            type="button"
+            class="btn btn-default dropdown-toggle"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" data-dropdown-title="<?= e(trans('adil.smartjob::lang.job.bulk_actions')) ?>">
+            <li>
+                <a href="javascript:;" class="oc-icon-trash-o" data-action="delete" data-confirm="<?= e(trans('adil.smartjob::lang.job.delete_selected_confirm')) ?>">
+                    <?= e(trans('adil.smartjob::lang.job.delete_selected')) ?>
+                </a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+                <a href="javascript:;" class="oc-icon-user-times" data-action="filled" data-confirm="<?= e(trans('adil.smartjob::lang.job.filled_selected_confirm')) ?>">
+                    <?= e(trans('adil.smartjob::lang.job.filled_selected')) ?>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="oc-icon-user-plus" data-action="vacant" data-confirm="<?= e(trans('adil.smartjob::lang.job.vacant_selected_confirm')) ?>">
+                    <?= e(trans('adil.smartjob::lang.job.vacant_selected')) ?>
+                </a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+                <a href="javascript:;" class="oc-icon-ban" data-action="expire" request-data="job_status: 'update'" data-confirm="<?= e(trans('adil.smartjob::lang.job.expire_selected_confirm')) ?>">
+                    <?= e(trans('adil.smartjob::lang.job.expire_selected')) ?>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="oc-icon-circle-o-notch" data-action="activate" data-confirm="<?= e(trans('adil.smartjob::lang.job.active_selected_confirm')) ?>">
+                    <?= e(trans('adil.smartjob::lang.job.active_selected')) ?>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: adil.smartjob::lang.job.title
+        span: auto
+        placeholder: adil.smartjob::lang.job.title_placeholder
+        required: true
+    slug:
+        label: adil.smartjob::lang.job.slug
+        type: text
+        preset: title
+        required: true
+        readonly: true
+        span: auto
+    location:
+        label: adil.smartjob::lang.job.location
+        span: auto
+    job_type:
+        label: adil.smartjob::lang.job.job_type
+        span: auto
+    department:
+        label: adil.smartjob::lang.job.department
+        type: relation
+        nameFrom: department_name
+        span: auto
+    description:
+        type: Backend\FormWidgets\RichEditor
+        label: adil.smartjob::lang.job.description
+        span: full
+        required: true
+    application_email:
+        label: adil.smartjob::lang.job.application_email
+        span: auto
+    job_expiry:
+        label: adil.smartjob::lang.job.job_expiry
+        type: datepicker
+        format: Y-m-d
+        mode: date
+        span: auto        
+    min_salary:
+        label: adil.smartjob::lang.job.min_salary
+        span: auto
+    max_salary:
+        label: adil.smartjob::lang.job.max_salary
+        span: auto
+    qualification:
+        label: adil.smartjob::lang.job.qualification
+        span: auto
+    experience:
+        label: adil.smartjob::lang.job.experience
+        span: auto
+    gender:
+        # label: adil.smartjob::lang.job.gender
+        span: auto
+        label: adil.smartjob::lang.job.gender
+        # type: radio
+        # options:
+        #     all: All
+        #     registered: Registered only
+        #     guests: Guests only
+    total_number_of_post:
+        label: adil.smartjob::lang.job.total_number_of_post
+        span: auto
+    position_filled:
+        label: adil.smartjob::lang.job.position_filled
+        span: auto
+        type: switch
+        comment: Flick this switch
+
+    job_status:
+        label: adil.smartjob::lang.job.job_status
+        span: auto
+        type: switch
+        comment: Is job expired?

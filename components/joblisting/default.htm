@@ -1,0 +1,48 @@
+{% set jobs = __SELF__.jobs %}
+
+<!-- <div class="panel panel-primary">
+    <div class="panel-heading">Job opportunities</div>
+    <div class="panel-body">
+ -->    <!-- <div class="row">
+        <div class="col-sm-5"><strong>Title</strong></div>
+        <div class="col-sm-3"><strong>Department</strong></div>
+        <div class="col-sm-2"><strong>Location</strong></div>
+        <div class="col-sm-2"><strong>Expires</strong></div>        
+    </div>
+    {% for job in jobs %}
+    <div class="row">
+        <div class="col-sm-5"><a href="job/{{ job.slug }}/{{ job.id }}">{{ job.title }} ({{ job.job_type }})</a></div>
+        <div class="col-sm-3">{{ job.department.department_name }}</div>
+        <div class="col-sm-2">{{ job.department.location }}</div>
+        <div class="col-sm-2">{{ job.job_expiry|date('M d, Y') }}</div>        
+    </div>
+    {% else %}
+        <div class="text-danger">Jobs not available!</div>
+    {% endfor %}
+    </div> -->
+<!-- </div> -->
+<div class="panel panel-primary">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr class="info">
+                <th width="40%">Title</th>
+                <th width="10%">Contract</th>
+                <th width="25%">Department</th>
+                <th width="10%">Expires</th>
+                <th width="15%">Location</th>
+            </tr>
+        </thead>
+        {% for job in jobs %}
+        <tr>
+            <td><a href="job/{{ job.slug }}/{{ job.id }}">{{ job.title }}</a></td>
+            <td>{{ job.job_type }}</td>
+            <td>{{ job.department.department_name }}</td>
+            <td>{{ job.job_expiry|date('M d, Y') }}</td>
+            <td>{{ job.location }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div align="center">
+    {{ jobs.render|raw }}
+</div>

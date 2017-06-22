@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Job
+
+# Model Form Field configuration
+form: $/adil/smartjob/models/job/fields.yaml
+
+# Model Class name
+modelClass: Adil\Smartjob\Models\Job
+
+# Default redirect location
+defaultRedirect: adil/smartjob/jobs
+
+# Create page
+create:
+    title: Create Job
+    redirect: adil/smartjob/jobs/update/:id
+    redirectClose: adil/smartjob/jobs
+
+# Update page
+update:
+    title: Edit Job
+    redirect: adil/smartjob/jobs
+    redirectClose: adil/smartjob/jobs
+
+# Preview page
+preview:
+    title: Preview Job

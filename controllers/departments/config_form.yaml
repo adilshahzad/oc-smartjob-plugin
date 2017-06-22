@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Department
+
+# Model Form Field configuration
+form: $/adil/smartjob/models/department/fields.yaml
+
+# Model Class name
+modelClass: Adil\Smartjob\Models\Department
+
+# Default redirect location
+defaultRedirect: adil/smartjob/departments
+
+# Create page
+create:
+    title: Create Department
+    redirect: adil/smartjob/departments/update/:id
+    redirectClose: adil/smartjob/departments
+
+# Update page
+update:
+    title: Edit Department
+    redirect: adil/smartjob/departments
+    redirectClose: adil/smartjob/departments
+
+# Preview page
+preview:
+    title: Preview Department

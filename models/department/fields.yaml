@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    # id:
+    #     label: ID
+    #     disabled: true
+    #     span: auto
+    department_name:
+        label: adil.smartjob::lang.department.department_name
+        span: auto

@@ -1,0 +1,16 @@
+1.0.1: First version of smartjob
+1.0.2: 
+    - Create Jobs table in the DB
+    - create_jobs_table.php
+1.0.3:
+    - Create department table in the DB
+    - create_departments_table.php
+1.0.4:
+    - Add department_id column to the Jobs table
+    - add_department_id_column.php
+1.0.5:
+    - Remove the already created column department from the Jobs table
+    - delete_department_column.php
+1.0.6:
+    - Users can apply to a job
+    - create_user_jobs_table.php

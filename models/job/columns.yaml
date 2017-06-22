@@ -1,0 +1,75 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+        width: 3%
+    user_count:
+        label: adil.smartjob::lang.job.users
+        relation: userjobs_count
+        valueFrom: count
+        default: 0
+        sortable: false
+        searchable: false
+        # type: partial
+        # path: ~/plugins/adil/smartjob/models/job/user_jobs.htm
+    title:
+        label: adil.smartjob::lang.job.title
+        invisible: false
+    location:
+        label: adil.smartjob::lang.job.location
+    job_type:
+        label: adil.smartjob::lang.job.job_type
+    department:
+        label: adil.smartjob::lang.job.department
+        relation: department
+        select: department_name
+    application_email:
+        label: adil.smartjob::lang.job.application_email
+        invisible: true
+    job_expiry:
+        label: adil.smartjob::lang.job.job_expiry
+        type: date
+        format: d M Y
+        width: 5%
+    min_salary:
+        label: adil.smartjob::lang.job.min_salary
+        type: number
+        invisible: true
+    max_salary:
+        label: adil.smartjob::lang.job.max_salary
+        type: number
+        invisible: true
+    qualification:
+        label: adil.smartjob::lang.job.qualification
+        invisible: true
+    experience:
+        label: adil.smartjob::lang.job.experience
+        invisible: true
+    gender:
+        label: adil.smartjob::lang.job.gender
+        invisible: true
+    total_number_of_post:
+        label: adil.smartjob::lang.job.total_number_of_post
+        invisible: true
+    position_filled:
+        label: adil.smartjob::lang.job.position_filled
+        type: switch
+        width: 5%
+        invisible: true
+    job_status:
+        label: adil.smartjob::lang.job.job_status
+        type: partial
+        path: ~/plugins/adil/smartjob/models/job/job_status.htm
+        # type: switch
+        width: 5%
+        invisible: true
+    created_at:
+        label: adil.smartjob::lang.job.created_at
+        invisible: true
+    updated_at:
+        label: Updated at
+        invisible: true
