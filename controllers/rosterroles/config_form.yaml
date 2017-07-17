@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Roster Role
+
+# Model Form Field configuration
+form: $/adil/smartjob/models/rosterrole/fields.yaml
+
+# Model Class name
+modelClass: Adil\Smartjob\Models\RosterRole
+
+# Default redirect location
+defaultRedirect: adil/smartjob/rosterroles
+
+# Create page
+create:
+    title: Create Roster Role
+    redirect: adil/smartjob/rosterroles/update/:id
+    redirectClose: adil/smartjob/rosterroles
+
+# Update page
+update:
+    title: Edit Roster Role
+    redirect: adil/smartjob/rosterroles
+    redirectClose: adil/smartjob/rosterroles
+
+# Preview page
+preview:
+    title: Preview Roster Role

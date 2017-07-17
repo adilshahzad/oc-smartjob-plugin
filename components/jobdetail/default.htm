@@ -2,14 +2,18 @@
 
 <div class="row">
 
-    <div class="col-md-12">       
+    <div class="col-md-12">
         {% if not user %}
         <div class="alert alert-warning">
                 Please sign in to apply for this position! or send your CV to <a href="mailto: {{ html_email(job.application_email)|raw }}">email</a>
         </div>        
         {% endif %}
     </div>
-
+<div class="col-md-12">       
+    <div class="alert alert-success">
+        <h4>{{job.sub_role.sub_role_title}}</h4>
+    </div>
+</div>
     <div class="col-md-5">
         <i class="icon-tags text-danger" title="Job Type"></i> {{job.job_type}} in {{job.department.department_name}}  <i class="icon-map-marker text-success" title="Job location"></i> {{job.location}} 
     </div>

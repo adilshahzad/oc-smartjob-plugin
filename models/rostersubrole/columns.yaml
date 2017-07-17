@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    roster_role_id:
+        label: adil.smartjob::lang.roster_roles.title
+        relation: roster_role
+        select: title
+    sub_role_title:
+        label: adil.smartjob::lang.roster_sub_roles.title
+        searchable: true

@@ -3,6 +3,16 @@
 # ===================================
 
 fields:
+    _roster_role_id:
+        label: adil.smartjob::lang.roster_roles.roles
+        type: dropdown
+        placeholder: -- Select Roster --
+        span: auto
+    sub_role_id:
+        label: adil.smartjob::lang.roster_sub_roles.title
+        type: dropdown
+        dependsOn: _roster_role_id
+        span: auto
     title:
         label: adil.smartjob::lang.job.title
         span: auto
@@ -53,25 +63,24 @@ fields:
         label: adil.smartjob::lang.job.experience
         span: auto
     gender:
-        # label: adil.smartjob::lang.job.gender
-        span: auto
         label: adil.smartjob::lang.job.gender
-        # type: radio
-        # options:
-        #     all: All
-        #     registered: Registered only
-        #     guests: Guests only
+        span: auto
+        type: dropdown
+        options:
+            No Preference: No Preference
+            Femlae: Femlae
+            Male: Male
     total_number_of_post:
         label: adil.smartjob::lang.job.total_number_of_post
         span: auto
-    position_filled:
-        label: adil.smartjob::lang.job.position_filled
+    is_filled:
+        label: adil.smartjob::lang.job.is_filled
         span: auto
         type: switch
         comment: Flick this switch
 
-    job_status:
-        label: adil.smartjob::lang.job.job_status
+    is_expired:
+        label: adil.smartjob::lang.job.is_expired
         span: auto
         type: switch
         comment: Is job expired?

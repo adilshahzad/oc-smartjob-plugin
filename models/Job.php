@@ -31,17 +31,21 @@ class Job extends Model
         'userJobs' => ['Adil\Smartjob\Models\UserJob'],
     ];
     public $belongsTo = [
-        'department' => [
-                'Adil\Smartjob\Models\Department',
-            ]
+        'department' => ['Adil\Smartjob\Models\Department'],
+        'sub_role' => ['Adil\Smartjob\Models\RosterSubRole'],
     ];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
-    
+
+    public function getRosterRoleIdOptions()
+    {
+        return \Adil\Smartjob\Models\RosterRole::orderBy('title', 'asc')->lists('title', 'id');
+    }
+
+    public function getSubRoleIdOptions($value, $data)
+    {
+        return \Adil\Smartjob\Models\RosterSubRole::where('roster_role_id', '=', $data->_roster_role_id)
+        ->orderBy('sub_role_title', 'asc')
+        ->lists('sub_role_title', 'id');
+    }
     //
     // Scopes
     //

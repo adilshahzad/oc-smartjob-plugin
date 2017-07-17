@@ -72,4 +72,14 @@ return [
         'job_id' => 'Job ID',
         'job_id_description' => 'Provide job id',
     ],
+    'roster_roles' => [
+        'manage' => 'Manage Roles',
+        'roles' => 'Roster Roles',
+        'title' => 'Roster Title',
+        'created_at' => 'Created at',
+    ],
+    'roster_sub_roles' => [
+        'title' => 'Roster Sub Role Title',
+        'created_at' => 'Created at',
+    ],    
 ];

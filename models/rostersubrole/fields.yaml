@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    # id:
+    #     label: ID
+    #     disabled: true
+    roster_role_id:
+        label: adil.smartjob::lang.roster_roles.roles
+        span: auto
+        required: 1
+        type: dropdown
+        placeholder: -- Select Roster --
+    sub_role_title:
+        label: adil.smartjob::lang.roster_sub_roles.title
+        span: auto
+        required: 1

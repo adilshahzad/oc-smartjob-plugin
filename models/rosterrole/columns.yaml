@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: adil.smartjob::lang.roster_roles.title
+        searchable: true
+    created_at:
+        label: adil.smartjob::lang.roster_roles.created_at
+    Add Sub Roles:
+        label: Sub Roles
+        type: partial
+        path: ~/plugins/adil/smartjob/models/rosterrole/_subroles_column.htm
+        clickable: false

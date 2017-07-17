@@ -74,6 +74,11 @@ class Plugin extends PluginBase
                 'tab' => 'adil.smartjob::lang.plugin.name',
                 'label' => 'Manage Jobs'
             ],
+            'adil.smartjob.roster_roles' => [
+                'tab' => 'adil.smartjob::lang.roster_roles.roles',
+                'label' => 'adil.smartjob::lang.roster_roles.manage'
+
+            ],
         ];
     }
 
@@ -99,6 +104,12 @@ class Plugin extends PluginBase
                         'url'         => Backend::url('adil/smartjob/jobs'),
                         'permissions' => ['adil.smartjob.access_jobs']
                     ],
+                    'rosterroles' =>[
+                        'label'      => 'adil.smartjob::lang.roster_roles.roles',
+                        'icon'       => 'icon-list-ul',
+                        'url'        => Backend::url('adil/smartjob/rosterroles'),
+                        // 'permissions' => ['adil.smartjob.access_roles']
+                    ],
                     'departments' => [
                         'label'       => 'Departments',
                         'icon'        => 'icon-list-ol',
@@ -115,7 +126,7 @@ class Plugin extends PluginBase
      * 
      * Expire the jobs as soon as the expiry date reached.
      * 
-     */    
+     */
 
     public function registerSchedule($schedule)
     {

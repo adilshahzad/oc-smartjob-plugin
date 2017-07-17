@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Roster Sub Role
+
+# Model Form Field configuration
+form: $/adil/smartjob/models/rostersubrole/fields.yaml
+
+# Model Class name
+modelClass: Adil\SmartJob\Models\RosterSubRole
+
+# Default redirect location
+defaultRedirect: adil/smartjob/rostersubroles
+
+# Create page
+create:
+    title: Create Roster Sub Role
+    redirect: adil/smartjob/rostersubroles/update/:id
+    redirectClose: adil/smartjob/rostersubroles
+
+# Update page
+update:
+    title: Edit Roster Sub Role
+    redirect: adil/smartjob/rostersubroles
+    redirectClose: adil/smartjob/rostersubroles
+
+# Preview page
+preview:
+    title: Preview Roster Sub Role

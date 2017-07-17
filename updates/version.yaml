@@ -17,3 +17,15 @@
 1.0.7:
     - Renamed the boolean columns to meet the OctoberCMS plugin requirements
     - rename_boolean_columns.php
+1.0.8:
+    - Created roster roles table.
+    - create_roster_roles_table.php
+1.0.9:
+    - Created Roster Sub Roles table.
+    - create_roster_sub_roles_table.php
+1.0.10:
+    - Added title column to the Sub Roles table.
+    - add_sub_role_title_column.php
+2.0.1:
+    - Added sub role Id to the job table
+    - add_sub_role_id_column.php

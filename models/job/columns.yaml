@@ -23,6 +23,14 @@ columns:
         label: adil.smartjob::lang.job.location
     job_type:
         label: adil.smartjob::lang.job.job_type
+    sub_role_id:
+        label: adil.smartjob::lang.roster_sub_roles.title
+        relation: sub_role
+        select: sub_role_title
+    sub_role_title:
+    # {{ job.sub_role.roster_role.title }}
+        label: Roles Title
+        select: title
     department:
         label: adil.smartjob::lang.job.department
         relation: department

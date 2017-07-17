@@ -58,7 +58,7 @@ class Jobdetail extends ComponentBase
 
          $job = $job->isPublished()->firstOrFail();
         
-        $this->page->title = $job->title;
+        $this->page->title = $job->sub_role->roster_role->title;
         return $job;
     }
 
